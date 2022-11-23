@@ -37,10 +37,25 @@ def fractionalKnapsack(W, arr):
 # Driver's Code
 if __name__ == "__main__":
 	# Weight of Knapsack
-    W = 50
-    arr = [Item(60, 10), Item(100, 20), Item(120, 30)]
+#    W = 50
+#    arr = [Item(60, 10), Item(100, 20), Item(120, 30)]
 
 	# Function call
-    max_val = fractionalKnapsack(W, arr)
-    print("Knapsack Capacity:", W)
-    print ('Maximum value we can obtain = {}'.format(max_val))
+#    max_val = fractionalKnapsack(W, arr)
+#    print("Knapsack Capacity:", W)
+    
+    
+  capacity=int(input("enter capacity: "))
+  n=int(input("enter the no of items: "))
+  arr=[]
+  for i in range(0,n):
+    profit = int(input("Enter profit: "))
+    weight = int(input("Enter weight: "))
+    temp = Item(profit,weight)
+    
+    arr.append(temp)
+
+  # arr = [Item(24, 15), Item(15, 10), Item(25, 18)]
+  maxprofit=fractionalKnapsack(capacity,arr)
+  print(maxprofit)
+ #   print ('Maximum value we can obtain = {}'.format(max_val))

@@ -14,10 +14,39 @@ def knapSack(W, wt, val, n):
     return K[n][W]
   
 # Driver program to test above function
-val = [60, 100, 120]
-wt = [10, 20, 30]
-W = 50
+#val = [60, 100, 120]
+#wt = [10, 20, 30]
+#W = 50
+#n = len(val)
+
+print('Enter values: ')
+val = list(map(int,input().split()))
+print("Enter weight: ")
+wt = list(map(int,input().split()))
+print("Enter weight: ")
+
+W = int(input())
 n = len(val)
+
+# val = [60, 100, 120]
+# wt = [10, 20, 30]
+# W = 50
+# n = len(val)
+print("Values:", val)
+print("Weights:", wt)
+print("Knapsack Capacity:", W)
+print("Maximum Weight:", knapSack(W, wt, val, n))
+
+
+
+
+
+
+
+
+
+
+
 print("Values:", val)
 print("Weights:", wt)
 print("Knapsack Capacity:", W)
